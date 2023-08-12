@@ -15,10 +15,10 @@ function App() {
 
       <Show above='lg'> 
        {/* // will be rendered for large screen and above  */}
-      <GridItem area='aside' bg='gold'> Aside </GridItem>
+      <GridItem area='aside'> Aside </GridItem>
       </Show>
   
-      <GridItem area='main' bg='dodgerblue'> Main </GridItem>
+      <GridItem area='main'> Main </GridItem>
      </Grid>
     </>
   )
