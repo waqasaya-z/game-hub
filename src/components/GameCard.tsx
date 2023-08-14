@@ -9,7 +9,6 @@ interface Props {
     game: Game
 }
 
-
 const GameCard = ({ game } : Props) => {
   return (
    <Card>
