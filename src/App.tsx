@@ -10,14 +10,19 @@ function App() {
      <Grid templateAreas={{ 
       base: `"nav" "main"`,
       lg: `"nav nav" "aside main"` // 1024 pixels+
-    }} >
+    }} 
+    templateColumns={{
+      base: '1fr',
+      lg: '200px 1fr'
+    }}
+    >
       <GridItem area='nav'> 
       <NavBar />
        </GridItem>
 
       <Show above='lg'> 
        {/* // will be rendered for large screen and above  */}
-      <GridItem area='aside'> <GenereList /> </GridItem>
+      <GridItem area='aside' paddingX={5}> <GenereList /> </GridItem>
       </Show>
   
       <GridItem area='main'> 
