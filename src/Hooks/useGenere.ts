@@ -18,7 +18,7 @@ const apiClient = new APIClient<Genre>('/genres');
     queryKey: ['genres'],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 6 * 1000, //24 hours
-    initialData: {count: genres.length, results: genres}
+    initialData: {count: genres.length, results: genres, next: null}
     })
  }
 
