@@ -9,15 +9,15 @@ export interface Platform {
 }
 
 //  const usePlatform = () => ({data: platform, isLoading: false, error: null})
-const apiClient = new APIClient<Platform>('/platforms/list/parents');
+const apiClient = new APIClient<Platform>('/platforms/lists/parents');
 
-const usePlatform = () => {
+const usePlatforms = () => {
     return useQuery({
         queryKey: ['platforms'],
         queryFn: apiClient.getAll,
          staleTime: 24 * 60 * 6 * 1000, //24 hours
-         initialData: {count: platform.length, results: platform, next: null}
+         initialData: platform
     })
  }
   
- export default usePlatform;
+ export default usePlatforms;
